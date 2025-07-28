@@ -1,0 +1,24 @@
+﻿@model DayLifeSure.Models.DataModel.TblFeatures
+
+@{
+    ViewBag.Title = "UpdateFeature";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form action="/AdminLayout/UpdateFeature/" method="post">
+    <input type="hidden" name="FeatureId" value="@Model.FeatureId" />
+
+    <label>Title</label>
+    <input type="text" value="@Model.FeatureTitle" name="FeatureTitle" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Description</label>
+    <input type="text" name="FeatureDesc" value= "@Model.FeatureDesc" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Icon</label>
+    <input type="text" name="FeatureIcon" value= "@Model.FeatureTitle" class="form-control" style="border:1px solid black; " />
+    <br />
+
+    <button type="submit" class="btn btn-primary"> Özellik Güncelle</button>
+
+</form>
+

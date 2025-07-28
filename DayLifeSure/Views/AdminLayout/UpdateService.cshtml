@@ -1,0 +1,27 @@
+﻿@model DayLifeSure.Models.DataModel.TblServices
+
+@{
+    ViewBag.Title = "UpdateService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form action="/AdminLayout/UpdateService/" method="post">
+    <input type="hidden" name="ServiceId" value="@Model.ServiceId" />
+
+    <label>Title</label>
+    <input type="text" value="@Model.ServiceTitle" name="ServiceTitle" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Description</label>
+    <input type="text" name="ServiceDesc" value="@Model.ServiceDesc" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Icon</label>
+    <input type="text" name="Icon" value="@Model.Icon" class="form-control" style="border:1px solid black; " />
+    <br />
+    <label>ImageURl</label>
+    <input type="text" name="ImageUrl" value="@Model.ImageUrl" class="form-control" style="border:1px solid black; " />
+    <br />
+    <button type="submit" class="btn btn-primary"> Servis Güncelle</button>
+
+</form>
+
+

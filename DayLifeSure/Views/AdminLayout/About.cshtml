@@ -1,0 +1,76 @@
+﻿@model List<DayLifeSure.Models.DataModel.TblAbouts>
+@{
+    ViewBag.Title = "About";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+<style>
+    .table td, .table th {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 180px;
+    }
+
+    .img-cell img {
+        max-width: 60px;
+        max-height: 60px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+</style>
+<div class="row">
+    <div class="col-12">
+        <div class="card-header pb-0">
+            <h6>About Table</h6>
+        </div>
+
+        <div class="card-body px-0 pt-0 pb-2">
+            <table class="table align-items-center mb-0">
+                <thead>
+                    <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Başlık</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">AltBaşlık</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Açıklama</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Madde 1</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Madde 2</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Madde 3</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Sil</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Güncelle</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                <div class="d-flex px-2 py-1">
+                                    <div class="d-flex flex-column justify-content-center">
+                                        <h6 class="mb-0 text-sm">@item.AboutTitle</h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td class="text-xs font-weight-bold mb-0">@item.AboutSubtitle</td>
+                            <td  style="white-space: normal; word-break: break-word;"class="text-xs font-weight-bold mb-0">@item.AboutDesc</td>
+                            <td class="text-xs font-weight-bold mb-0">@item.AboutBullet1</td>
+                            <td class="text-xs font-weight-bold mb-0">@item.AboutBullet2</td>
+                            <td class="text-xs font-weight-bold mb-0">@item.AboutBullet3</td>
+                          
+                            <td class="align-middle text-center">
+                                <a href="/AdminLayout/DeleteAbout/@item.AboutId" class="btn btn-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Delete">
+                                    Sil
+                                </a>
+                            </td>
+                            <td class="align-middle text-center">
+                                <a href="/AdminLayout/UpdateAbout/@item.AboutId" class="btn btn-primary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Güncelle">
+                                    Edit
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+
+            <a href="/AdminLayout/AddAbout/" class="align-middle btn btn-primary mt-3">+ Yeni Hakkımızda</a>
+        </div>
+    </div>
+</div>

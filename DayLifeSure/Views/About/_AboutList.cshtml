@@ -1,0 +1,76 @@
+﻿@model List<DayLifeSure.Models.DataModel.AboutTranslation>
+    @using Resources
+<div class="container-fluid bg-light about pb-5">
+    <div class="container pb-5">
+        @foreach (var item in Model)
+        {
+
+        <div class="row g-5">
+            <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-item-content bg-white rounded p-5 h-100">
+                    <h4 class="text-primary">@item.Title</h4>
+                    <h1 class="display-4 mb-4">@item.Subtitle</h1>
+                    <p>
+                        @item.Description
+                    </p>
+
+                    <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>@item.Bullet1</p>
+                    <p class="text-dark"><i class="fa fa-check text-primary me-3"></i>@item.Bullet2</p>
+                    <p class="text-dark mb-4"><i class="fa fa-check text-primary me-3"></i>@item.Bullet3</p>
+                    <a class="btn btn-primary rounded-pill py-3 px-5" href="#">More Information</a>
+                </div>
+            </div>
+            <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="bg-white rounded p-5 h-100">
+                    <div class="row g-4 justify-content-center">
+                        <div class="col-12">
+                            <div class="rounded bg-light">
+                                <img src="~/Content/LifeSure-1.0.0/img/about-1.png" class="img-fluid rounded w-100" alt="">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter-item bg-light rounded p-3 h-100">
+                                <div class="counter-counting">
+                                    <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">129</span>
+                                    <span class="h1 fw-bold text-primary">+</span>
+                                </div>
+                                <h4 class="mb-0 text-dark">@Lang.Policy</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter-item bg-light rounded p-3 h-100">
+                                <div class="counter-counting">
+                                    <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">99</span>
+                                    <span class="h1 fw-bold text-primary">+</span>
+                                </div>
+                                <h4 class="mb-0 text-dark">@Lang.Won</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter-item bg-light rounded p-3 h-100">
+                                <div class="counter-counting">
+                                    <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">556</span>
+                                    <span class="h1 fw-bold text-primary">+</span>
+                                </div>
+                                <h4 class="mb-0 text-dark">@Lang.Agent</h4>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="counter-item bg-light rounded p-3 h-100">
+                                <div class="counter-counting">
+                                    <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">967</span>
+                                    <span class="h1 fw-bold text-primary">+</span>
+                                </div>
+                                <h4 class="mb-0 text-dark">@Lang.Team_Members</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        }
+    </div>
+</div>
+

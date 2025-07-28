@@ -1,0 +1,246 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LifeSureDbModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="AboutTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AboutId" Type="int" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="10" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Subtitle" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Bullet1" Type="nvarchar" MaxLength="255" />
+    <Property Name="Bullet2" Type="nvarchar" MaxLength="255" />
+    <Property Name="Bullet3" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="ContactInfoTranslation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ContactInfoId" Type="int" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Info" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="FaqTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FaqId" Type="int" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="500" />
+    <Property Name="Answer" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="FeatureTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeatureId" Type="int" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ServiceTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceId" Type="int" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="5" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="255" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblAbouts">
+    <Key>
+      <PropertyRef Name="AboutId" />
+    </Key>
+    <Property Name="AboutId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="AboutTitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="AboutSubtitle" Type="nvarchar" MaxLength="150" />
+    <Property Name="AboutDesc" Type="nvarchar(max)" />
+    <Property Name="AboutBullet1" Type="nvarchar" MaxLength="200" />
+    <Property Name="AboutBullet2" Type="nvarchar" MaxLength="200" />
+    <Property Name="AboutBullet3" Type="nvarchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="TblContactInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" Nullable="false" />
+    <Property Name="Info" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblEmployees">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Profession" Type="nvarchar" MaxLength="150" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TblFAQs">
+    <Key>
+      <PropertyRef Name="FAQId" />
+    </Key>
+    <Property Name="FAQId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Question" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="Answer" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TblFeatures">
+    <Key>
+      <PropertyRef Name="FeatureId" />
+    </Key>
+    <Property Name="FeatureId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FeatureTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="FeatureDesc" Type="nvarchar" MaxLength="500" />
+    <Property Name="FeatureIcon" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TblServices">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ServiceTitle" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="ServiceDesc" Type="nvarchar(max)" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="TblTestimonials">
+    <Key>
+      <PropertyRef Name="TestimonialId" />
+    </Key>
+    <Property Name="TestimonialId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="Profession" Type="nvarchar" MaxLength="150" />
+    <Property Name="ImageUrl" Type="nvarchar" MaxLength="300" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="TestimonialTranslations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TestimonialId" Type="int" Nullable="false" />
+    <Property Name="LanguageCode" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="FullName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Profession" Type="nvarchar" MaxLength="100" />
+    <Property Name="Comment" Type="nvarchar(max)" />
+  </EntityType>
+  <Association Name="FK__AboutTran__About__36B12243">
+    <End Role="TblAbouts" Type="Self.TblAbouts" Multiplicity="0..1" />
+    <End Role="AboutTranslation" Type="Self.AboutTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblAbouts">
+        <PropertyRef Name="AboutId" />
+      </Principal>
+      <Dependent Role="AboutTranslation">
+        <PropertyRef Name="AboutId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ContactIn__Conta__4F7CD00D">
+    <End Role="TblContactInfo" Type="Self.TblContactInfo" Multiplicity="1" />
+    <End Role="ContactInfoTranslation" Type="Self.ContactInfoTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblContactInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContactInfoTranslation">
+        <PropertyRef Name="ContactInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FaqTransl__FaqId__49C3F6B7">
+    <End Role="TblFAQs" Type="Self.TblFAQs" Multiplicity="1" />
+    <End Role="FaqTranslation" Type="Self.FaqTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblFAQs">
+        <PropertyRef Name="FAQId" />
+      </Principal>
+      <Dependent Role="FaqTranslation">
+        <PropertyRef Name="FaqId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__FeatureTr__Featu__3C69FB99">
+    <End Role="TblFeatures" Type="Self.TblFeatures" Multiplicity="1" />
+    <End Role="FeatureTranslation" Type="Self.FeatureTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblFeatures">
+        <PropertyRef Name="FeatureId" />
+      </Principal>
+      <Dependent Role="FeatureTranslation">
+        <PropertyRef Name="FeatureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ServiceTr__Servi__398D8EEE">
+    <End Role="TblServices" Type="Self.TblServices" Multiplicity="1" />
+    <End Role="ServiceTranslation" Type="Self.ServiceTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblServices">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="ServiceTranslation">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Testimoni__Testi__4CA06362">
+    <End Role="TblTestimonials" Type="Self.TblTestimonials" Multiplicity="1" />
+    <End Role="TestimonialTranslations" Type="Self.TestimonialTranslations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblTestimonials">
+        <PropertyRef Name="TestimonialId" />
+      </Principal>
+      <Dependent Role="TestimonialTranslations">
+        <PropertyRef Name="TestimonialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="LifeSureDbModelStoreContainer">
+    <EntitySet Name="AboutTranslation" EntityType="Self.AboutTranslation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ContactInfoTranslation" EntityType="Self.ContactInfoTranslation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FaqTranslation" EntityType="Self.FaqTranslation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FeatureTranslation" EntityType="Self.FeatureTranslation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ServiceTranslation" EntityType="Self.ServiceTranslation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblAbouts" EntityType="Self.TblAbouts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblContactInfo" EntityType="Self.TblContactInfo" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblEmployees" EntityType="Self.TblEmployees" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFAQs" EntityType="Self.TblFAQs" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblFeatures" EntityType="Self.TblFeatures" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblServices" EntityType="Self.TblServices" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TblTestimonials" EntityType="Self.TblTestimonials" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TestimonialTranslations" EntityType="Self.TestimonialTranslations" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__AboutTran__About__36B12243" Association="Self.FK__AboutTran__About__36B12243">
+      <End Role="TblAbouts" EntitySet="TblAbouts" />
+      <End Role="AboutTranslation" EntitySet="AboutTranslation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ContactIn__Conta__4F7CD00D" Association="Self.FK__ContactIn__Conta__4F7CD00D">
+      <End Role="TblContactInfo" EntitySet="TblContactInfo" />
+      <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FaqTransl__FaqId__49C3F6B7" Association="Self.FK__FaqTransl__FaqId__49C3F6B7">
+      <End Role="TblFAQs" EntitySet="TblFAQs" />
+      <End Role="FaqTranslation" EntitySet="FaqTranslation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__FeatureTr__Featu__3C69FB99" Association="Self.FK__FeatureTr__Featu__3C69FB99">
+      <End Role="TblFeatures" EntitySet="TblFeatures" />
+      <End Role="FeatureTranslation" EntitySet="FeatureTranslation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ServiceTr__Servi__398D8EEE" Association="Self.FK__ServiceTr__Servi__398D8EEE">
+      <End Role="TblServices" EntitySet="TblServices" />
+      <End Role="ServiceTranslation" EntitySet="ServiceTranslation" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Testimoni__Testi__4CA06362" Association="Self.FK__Testimoni__Testi__4CA06362">
+      <End Role="TblTestimonials" EntitySet="TblTestimonials" />
+      <End Role="TestimonialTranslations" EntitySet="TestimonialTranslations" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,44 @@
+﻿
+@{
+    ViewBag.Title = "ImageGenerate";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+@model DayLifeSure.Models.ViewModels.GeneratedImageViewModel
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-md-8 col-lg-6">
+            <div class="card border-success shadow-lg">
+                <div class="card-header bg-success text-white text-center">
+                    <h4><i class="fa-solid fa-image"></i> Prompt'a Göre Görsel Üret</h4>
+                </div>
+                <div class="card-body">
+                    @using (Html.BeginForm("ImageGenerate", "GenerateImage", FormMethod.Post, new { @class = "needs-validation", novalidate = "novalidate" }))
+                    {
+                        <div class="mb-4">
+                            @Html.LabelFor(m => m.Prompt, "Prompt", new { @class = "form-label fw-bold" })
+                            @Html.TextBoxFor(m => m.Prompt, new { @class = "form-control form-control-lg", placeholder = "Bir sahne veya kelime gir...", autofocus = "autofocus" })
+                        </div>
+                        <button type="submit" class="btn btn-lg btn-success w-100">
+                            <i class="fa-solid fa-wand-magic-sparkles me-2"></i> Görsel Üret
+                        </button>
+                    }
+                </div>
+            </div>
+
+            @if (!string.IsNullOrEmpty(Model.ImageBase64))
+            {
+                <div class="card mt-5 shadow border-warning">
+                    <div class="card-header bg-warning text-dark text-center">
+                        <h5><i class="fa-solid fa-image me-2"></i> Üretilen Görsel</h5>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="data:image/png;base64,@Model.ImageBase64" class="img-fluid rounded shadow-sm" style="max-height: 400px;" alt="Generated Image" />
+                        <p class="mt-3 text-muted fst-italic">Prompt: <span class="fw-bold">@Model.Prompt</span></p>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>

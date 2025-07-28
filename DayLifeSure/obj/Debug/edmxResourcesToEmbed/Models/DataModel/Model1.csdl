@@ -1,0 +1,258 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="LifeSureDbModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="TblAbouts">
+    <Key>
+      <PropertyRef Name="AboutId" />
+    </Key>
+    <Property Name="AboutId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AboutTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AboutSubtitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="AboutDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="AboutBullet1" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AboutBullet2" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="AboutBullet3" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AboutTranslation" Relationship="LifeSureDbModel.FK__AboutTran__About__36B12243" FromRole="TblAbouts" ToRole="AboutTranslation" />
+  </EntityType>
+  <EntityType Name="TblContactInfo">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Info" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ContactInfoTranslation" Relationship="LifeSureDbModel.FK__ContactIn__Conta__4F7CD00D" FromRole="TblContactInfo" ToRole="ContactInfoTranslation" />
+  </EntityType>
+  <EntityType Name="TblEmployees">
+    <Key>
+      <PropertyRef Name="EmployeeId" />
+    </Key>
+    <Property Name="EmployeeId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Profession" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="TblFAQs">
+    <Key>
+      <PropertyRef Name="FAQId" />
+    </Key>
+    <Property Name="FAQId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Question" Type="String" MaxLength="300" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FaqTranslation" Relationship="LifeSureDbModel.FK__FaqTransl__FaqId__49C3F6B7" FromRole="TblFAQs" ToRole="FaqTranslation" />
+  </EntityType>
+  <EntityType Name="TblFeatures">
+    <Key>
+      <PropertyRef Name="FeatureId" />
+    </Key>
+    <Property Name="FeatureId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureTitle" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureDesc" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="FeatureIcon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="FeatureTranslation" Relationship="LifeSureDbModel.FK__FeatureTr__Featu__3C69FB99" FromRole="TblFeatures" ToRole="FeatureTranslation" />
+  </EntityType>
+  <EntityType Name="TblServices">
+    <Key>
+      <PropertyRef Name="ServiceId" />
+    </Key>
+    <Property Name="ServiceId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceTitle" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ServiceDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Icon" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="ServiceTranslation" Relationship="LifeSureDbModel.FK__ServiceTr__Servi__398D8EEE" FromRole="TblServices" ToRole="ServiceTranslation" />
+  </EntityType>
+  <EntityType Name="TblTestimonials">
+    <Key>
+      <PropertyRef Name="TestimonialId" />
+    </Key>
+    <Property Name="TestimonialId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Profession" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="ImageUrl" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TestimonialTranslations" Relationship="LifeSureDbModel.FK__Testimoni__Testi__4CA06362" FromRole="TblTestimonials" ToRole="TestimonialTranslations" />
+  </EntityType>
+  <EntityContainer Name="LifeSureDbEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="TblAbouts" EntityType="Self.TblAbouts" />
+    <EntitySet Name="TblContactInfo" EntityType="Self.TblContactInfo" />
+    <EntitySet Name="TblEmployees" EntityType="Self.TblEmployees" />
+    <EntitySet Name="TblFAQs" EntityType="Self.TblFAQs" />
+    <EntitySet Name="TblFeatures" EntityType="Self.TblFeatures" />
+    <EntitySet Name="TblServices" EntityType="Self.TblServices" />
+    <EntitySet Name="TblTestimonials" EntityType="Self.TblTestimonials" />
+    <EntitySet Name="AboutTranslation" EntityType="LifeSureDbModel.AboutTranslation" />
+    <AssociationSet Name="FK__AboutTran__About__36B12243" Association="LifeSureDbModel.FK__AboutTran__About__36B12243">
+      <End Role="TblAbouts" EntitySet="TblAbouts" />
+      <End Role="AboutTranslation" EntitySet="AboutTranslation" />
+    </AssociationSet>
+    <EntitySet Name="ServiceTranslation" EntityType="LifeSureDbModel.ServiceTranslation" />
+    <AssociationSet Name="FK__ServiceTr__Servi__398D8EEE" Association="LifeSureDbModel.FK__ServiceTr__Servi__398D8EEE">
+      <End Role="TblServices" EntitySet="TblServices" />
+      <End Role="ServiceTranslation" EntitySet="ServiceTranslation" />
+    </AssociationSet>
+    <EntitySet Name="FeatureTranslation" EntityType="LifeSureDbModel.FeatureTranslation" />
+    <AssociationSet Name="FK__FeatureTr__Featu__3C69FB99" Association="LifeSureDbModel.FK__FeatureTr__Featu__3C69FB99">
+      <End Role="TblFeatures" EntitySet="TblFeatures" />
+      <End Role="FeatureTranslation" EntitySet="FeatureTranslation" />
+    </AssociationSet>
+    <EntitySet Name="FaqTranslation" EntityType="LifeSureDbModel.FaqTranslation" />
+    <AssociationSet Name="FK__FaqTransl__FaqId__49C3F6B7" Association="LifeSureDbModel.FK__FaqTransl__FaqId__49C3F6B7">
+      <End Role="TblFAQs" EntitySet="TblFAQs" />
+      <End Role="FaqTranslation" EntitySet="FaqTranslation" />
+    </AssociationSet>
+    <EntitySet Name="TestimonialTranslations" EntityType="LifeSureDbModel.TestimonialTranslations" />
+    <AssociationSet Name="FK__Testimoni__Testi__4CA06362" Association="LifeSureDbModel.FK__Testimoni__Testi__4CA06362">
+      <End Role="TblTestimonials" EntitySet="TblTestimonials" />
+      <End Role="TestimonialTranslations" EntitySet="TestimonialTranslations" />
+    </AssociationSet>
+    <EntitySet Name="ContactInfoTranslation" EntityType="LifeSureDbModel.ContactInfoTranslation" />
+    <AssociationSet Name="FK__ContactIn__Conta__4F7CD00D" Association="LifeSureDbModel.FK__ContactIn__Conta__4F7CD00D">
+      <End Role="TblContactInfo" EntitySet="TblContactInfo" />
+      <End Role="ContactInfoTranslation" EntitySet="ContactInfoTranslation" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="AboutTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AboutId" Type="Int32" />
+    <Property Name="LanguageCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Subtitle" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Bullet1" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Bullet2" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Bullet3" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblAbouts" Relationship="LifeSureDbModel.FK__AboutTran__About__36B12243" FromRole="AboutTranslation" ToRole="TblAbouts" />
+  </EntityType>
+  <Association Name="FK__AboutTran__About__36B12243">
+    <End Type="LifeSureDbModel.TblAbouts" Role="TblAbouts" Multiplicity="0..1" />
+    <End Type="LifeSureDbModel.AboutTranslation" Role="AboutTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblAbouts">
+        <PropertyRef Name="AboutId" />
+      </Principal>
+      <Dependent Role="AboutTranslation">
+        <PropertyRef Name="AboutId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ServiceTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ServiceId" Type="Int32" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblServices" Relationship="LifeSureDbModel.FK__ServiceTr__Servi__398D8EEE" FromRole="ServiceTranslation" ToRole="TblServices" />
+  </EntityType>
+  <Association Name="FK__ServiceTr__Servi__398D8EEE">
+    <End Type="LifeSureDbModel.TblServices" Role="TblServices" Multiplicity="1" />
+    <End Type="LifeSureDbModel.ServiceTranslation" Role="ServiceTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblServices">
+        <PropertyRef Name="ServiceId" />
+      </Principal>
+      <Dependent Role="ServiceTranslation">
+        <PropertyRef Name="ServiceId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FeatureTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FeatureId" Type="Int32" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblFeatures" Relationship="LifeSureDbModel.FK__FeatureTr__Featu__3C69FB99" FromRole="FeatureTranslation" ToRole="TblFeatures" />
+  </EntityType>
+  <Association Name="FK__FeatureTr__Featu__3C69FB99">
+    <End Type="LifeSureDbModel.TblFeatures" Role="TblFeatures" Multiplicity="1" />
+    <End Type="LifeSureDbModel.FeatureTranslation" Role="FeatureTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblFeatures">
+        <PropertyRef Name="FeatureId" />
+      </Principal>
+      <Dependent Role="FeatureTranslation">
+        <PropertyRef Name="FeatureId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="FaqTranslation">
+    <Key>
+      <PropertyRef Name="TranslationId" />
+    </Key>
+    <Property Name="TranslationId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FaqId" Type="Int32" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" Nullable="false" MaxLength="5" FixedLength="false" Unicode="true" />
+    <Property Name="Question" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+    <Property Name="Answer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblFAQs" Relationship="LifeSureDbModel.FK__FaqTransl__FaqId__49C3F6B7" FromRole="FaqTranslation" ToRole="TblFAQs" />
+  </EntityType>
+  <Association Name="FK__FaqTransl__FaqId__49C3F6B7">
+    <End Type="LifeSureDbModel.TblFAQs" Role="TblFAQs" Multiplicity="1" />
+    <End Type="LifeSureDbModel.FaqTranslation" Role="FaqTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblFAQs">
+        <PropertyRef Name="FAQId" />
+      </Principal>
+      <Dependent Role="FaqTranslation">
+        <PropertyRef Name="FaqId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="TestimonialTranslations">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="TestimonialId" Type="Int32" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Profession" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Comment" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblTestimonials" Relationship="LifeSureDbModel.FK__Testimoni__Testi__4CA06362" FromRole="TestimonialTranslations" ToRole="TblTestimonials" />
+  </EntityType>
+  <Association Name="FK__Testimoni__Testi__4CA06362">
+    <End Type="LifeSureDbModel.TblTestimonials" Role="TblTestimonials" Multiplicity="1" />
+    <End Type="LifeSureDbModel.TestimonialTranslations" Role="TestimonialTranslations" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblTestimonials">
+        <PropertyRef Name="TestimonialId" />
+      </Principal>
+      <Dependent Role="TestimonialTranslations">
+        <PropertyRef Name="TestimonialId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityType Name="ContactInfoTranslation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ContactInfoId" Type="Int32" Nullable="false" />
+    <Property Name="LanguageCode" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Title" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="Info" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="TblContactInfo" Relationship="LifeSureDbModel.FK__ContactIn__Conta__4F7CD00D" FromRole="ContactInfoTranslation" ToRole="TblContactInfo" />
+  </EntityType>
+  <Association Name="FK__ContactIn__Conta__4F7CD00D">
+    <End Type="LifeSureDbModel.TblContactInfo" Role="TblContactInfo" Multiplicity="1" />
+    <End Type="LifeSureDbModel.ContactInfoTranslation" Role="ContactInfoTranslation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TblContactInfo">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="ContactInfoTranslation">
+        <PropertyRef Name="ContactInfoId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

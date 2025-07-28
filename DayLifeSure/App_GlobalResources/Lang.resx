@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="Agent" xml:space="preserve">
+    <value>Skilled Agents</value>
+  </data>
+  <data name="Answer" xml:space="preserve">
+    <value>A</value>
+  </data>
+  <data name="As" xml:space="preserve">
+    <value>As Lifesure, we offer customized assurance for your needs with our wide range of insurance solutions. With our expert team and innovative products, we are with you in every aspect of your life.</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Count" xml:space="preserve">
+    <value>Followers</value>
+  </data>
+  <data name="Customers" xml:space="preserve">
+    <value>What Our Customers Are Saying</value>
+  </data>
+  <data name="Expert" xml:space="preserve">
+    <value>Call To Our Expert</value>
+  </data>
+  <data name="Faqs" xml:space="preserve">
+    <value>Common Frequently Asked Questions</value>
+  </data>
+  <data name="Feature" xml:space="preserve">
+    <value>Our Features</value>
+  </data>
+  <data name="Feature_Desc" xml:space="preserve">
+    <value>At Lifesure, we secure you and your loved ones against the uncertainties of life. With our flexible and reliable insurance solutions, we ensure that you can look to your future with peace of mind.</value>
+  </data>
+  <data name="Happy" xml:space="preserve">
+    <value>Life Insure Makes You Happy</value>
+  </data>
+  <data name="Happy_Desc" xml:space="preserve">
+    <value>Our life insurance plans are designed to bring you peace of mind and financial security.</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Find A Location</value>
+  </data>
+  <data name="Mail" xml:space="preserve">
+    <value>Enter your email</value>
+  </data>
+  <data name="Meet" xml:space="preserve">
+    <value>Meet Our Expert Team Members</value>
+  </data>
+  <data name="More" xml:space="preserve">
+    <value>Read More</value>
+  </data>
+  <data name="MoreInformation" xml:space="preserve">
+    <value>More Information</value>
+  </data>
+  <data name="MoreServices" xml:space="preserve">
+    <value>More Services</value>
+  </data>
+  <data name="Newsletter" xml:space="preserve">
+    <value>Newsletter</value>
+  </data>
+  <data name="Offer" xml:space="preserve">
+    <value>We Offer You the Best Service</value>
+  </data>
+  <data name="Policy" xml:space="preserve">
+    <value>Insurance Policies</value>
+  </data>
+  <data name="Provide" xml:space="preserve">
+    <value>Insurance Provide you a Better Future</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Q</value>
+  </data>
+  <data name="Service" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Our Services</value>
+  </data>
+  <data name="signup" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="SSS" xml:space="preserve">
+    <value>Some Important FAQ's</value>
+  </data>
+  <data name="Team" xml:space="preserve">
+    <value>Our Team</value>
+  </data>
+  <data name="Team Members" xml:space="preserve">
+    <value>Team</value>
+  </data>
+  <data name="team_desc" xml:space="preserve">
+    <value>We’re a group of skilled individuals working together to turn ideas into results. Meet the minds driving our mission forward</value>
+  </data>
+  <data name="testimonial" xml:space="preserve">
+    <value>Testimonial</value>
+  </data>
+  <data name="testimonial_desc" xml:space="preserve">
+    <value>We value our clients’ voices. Here’s what they have to say about their experience with us — honest feedback that inspires us to keep delivering excellence</value>
+  </data>
+  <data name="Useful" xml:space="preserve">
+    <value>Useful Links</value>
+  </data>
+  <data name="Watch" xml:space="preserve">
+    <value>Watch Video</value>
+  </data>
+  <data name="Welcome" xml:space="preserve">
+    <value>Welcome to our site!</value>
+  </data>
+  <data name="Won" xml:space="preserve">
+    <value>Awards WON</value>
+  </data>
+</root>

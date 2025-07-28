@@ -1,0 +1,26 @@
+﻿@model DayLifeSure.Models.DataModel.TblServices
+@{
+    ViewBag.Title = "AddService";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<form action="/AdminLayout/AddService" method="post">
+
+    <label> Image Url</label>
+    <input type="text" name="ImageUrl" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label> Title</label>
+    <input type="text" name="ServiceTitle" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label> Description</label>
+    <input type="text" name="ServiceDesc" class="form-control" style="border:1px solid black;" />
+    <br />
+    <label>Icon</label>
+    <input type="text" name="Icon" class="form-control" style="border:1px solid black; " />
+    <br />
+
+    <button type="submit" class="btn btn-primary">Yeni Servis</button>
+
+</form>
+
+

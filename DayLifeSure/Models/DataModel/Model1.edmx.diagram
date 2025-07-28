@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ed50488f0eb3488497a4c4bcf71d0ee8" Name="Diagram1">
+        <EntityTypeShape EntityType="LifeSureDbModel.TblAbouts" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TblContactInfo" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TblEmployees" Width="1.5" PointX="2.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TblFAQs" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TblFeatures" Width="1.5" PointX="4.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TblServices" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TblTestimonials" Width="1.5" PointX="0.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LifeSureDbModel.AboutTranslation" Width="1.5" PointX="3" PointY="6.75" />
+        <AssociationConnector Association="LifeSureDbModel.FK__AboutTran__About__36B12243" />
+        <EntityTypeShape EntityType="LifeSureDbModel.ServiceTranslation" Width="1.5" PointX="9" PointY="0.75" />
+        <AssociationConnector Association="LifeSureDbModel.FK__ServiceTr__Servi__398D8EEE" />
+        <EntityTypeShape EntityType="LifeSureDbModel.FeatureTranslation" Width="1.5" PointX="7" PointY="4.625" />
+        <AssociationConnector Association="LifeSureDbModel.FK__FeatureTr__Featu__3C69FB99" />
+        <EntityTypeShape EntityType="LifeSureDbModel.FaqTranslation" Width="1.5" PointX="7" PointY="7.625" />
+        <AssociationConnector Association="LifeSureDbModel.FK__FaqTransl__FaqId__49C3F6B7" />
+        <EntityTypeShape EntityType="LifeSureDbModel.TestimonialTranslations" Width="1.5" PointX="3" PointY="10.625" />
+        <AssociationConnector Association="LifeSureDbModel.FK__Testimoni__Testi__4CA06362" />
+        <EntityTypeShape EntityType="LifeSureDbModel.ContactInfoTranslation" Width="1.5" PointX="5" PointY="14.625" />
+        <AssociationConnector Association="LifeSureDbModel.FK__ContactIn__Conta__4F7CD00D" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
